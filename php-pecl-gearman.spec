@@ -7,7 +7,7 @@
 Summary:	PHP wrapper to libgearman
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.1.2
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Tools
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -19,6 +19,7 @@ BuildRequires:	automake
 BuildRequires:	libgearman-devel >= 1.1.0
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.666
+%{?requires_php_extension}
 Provides:	php(gearman) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
